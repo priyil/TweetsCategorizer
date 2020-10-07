@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 const App = () => {
     return (
         <div className="app">
-            <!-- <QuizApp quizzes={quizzes} /> -->
+
             <p>Hello World!</p>
         </div>
     );
