@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import QuizApp from './components/QuizApp';
-//import { quizzes } from './data/quizzes';
+import SignIn from './components/SignIn';
+import { data } from './data/tweet.json';
 //import './styles.css';
 
 const App = () => {
     return (
         <div className="app">
-
-            <p>Hello World!</p>
+            <SignIn tweet={data} />
         </div>
     );
 };
