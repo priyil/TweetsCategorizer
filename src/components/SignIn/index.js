@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SignIn = ({data}) => {
-    console.log(data)
-    const userInfo = () => {
-        return data
-    }
-    return(
-            <div>
-                <button onClick={userInfo}>Click To Sign In</button>
+const SignIn = ({onClick}) => {
 
-            </div>
-    );
+  return (
+    <div>
+      <button onClick={onClick}>Click To Sign In</button>
+    </div>
+  );
 };
-            export default SignIn;
+
+export default SignIn;
