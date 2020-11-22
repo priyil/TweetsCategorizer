@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-//import QuizApp from './components/QuizApp';
-//import { quizzes } from './data/quizzes';
+import SignIn from './components/SignIn';
+import { data } from './data/tweet.json';
 //import './styles.css';
 
 const App = () => {
-    return (
-        <div className="app">
+  const [user, setUser] = useState(null);
 
-            <p>Hello World!</p>
+  const fetchUserInfo = () => {
+    setUser(data);
+  }
+
+  return (
+    <>
+      <div className="app">
+        <SignIn onClick={fetchUserInfo} />
+      </div>
+      { user &&
+        <div>
+          Hello, {user.username}
         </div>
-    );
+      }
+    </>
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
