@@ -1,9 +1,20 @@
 import React from 'react';
 
 const Favorites = ({data}) => {
+  const renderFavorites = () => {
+    return (
+      <>
+       { data.map((favoriteItem) => {
+         return (
+           <div>{favoriteItem.created_at}</div>
+         )
+       })}
+      </>
+    )
+  }
   return (
     <div>
-      Favorites Date: {data[0].created_at}
+      { renderFavorites() }
     </div>
   );
 }
